@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strategic Sourcing Calculator</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Strategic Sourcing Calculator</h1>
+      <p class="lead">Units Purchased</p>
+      <div class="lead">
+        <input id="lbs" type="text" placeholder="Units">
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary">per year</button>
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li id="yearSelect"><a href="#" >per year</a></li>
+            <li id="monthSelect"><a href="#" >per month</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="lead">Possible Savings Per Unit</p>
+      <div class="lead">
+        <input id="saved" type="text" placeholder="$">
+      </div>
+
+
+    <p class="lead">You would save...</p>
+    <div id="results">
+      <p id="y" class="lead"><span id="year">$____</span><span id="yper"> per year</span></p>
+      <p id="m" class="lead"><span id="month">$____</span><span id="mper"> per month</span></p>
+    </div><!-- end results-->
+
+  </div><!-- end container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://api.ning.com:80/files/ZF50gJ1IzcVU3iFK06HMBZjy6i-IZpVeE56dHMlPpaRZ2FhSlQXzhdIgDxDoGePeqBPpoDFuVm3Ap0DJrrLpS*Kdjf5poGXo/main.js"></script>    
+    <script src="script.js"></script>
+  </body>
+</html>  

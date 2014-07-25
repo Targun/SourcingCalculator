@@ -1,0 +1,90 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font: normal 100% "Open Sans", sans-serif;
+  color: #2E3640;
+  width:90%;
+  margin: 0 auto;
+}
+
+p {
+  font-size:1.3em;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+div.lead {
+  margin-bottom: 40px;
+}
+
+.btn {
+  color: #2E3640;
+  border: 2px solid #2E3640;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #f2f2f2;
+  background-color: #2E3640;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #376493;
+  border-color: #345679;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #345679;
+  border-color: #345679;
+}
+
+.dropdown-menu>li>a:hover {
+  background-color: #376493;
+}
+
+#results p.lead {
+  margin-bottom: 0;
+}
+
+#yper {
+  color: #C6655E;
+}
+
+#hper {
+  color: #95CD9C;
+}
+
+#mper {
+  color: #6DBCDB;
+}
+
+input {
+  width: 150px;
+}
+
+.btn-group {
+  margin: 0 0 4px 1px;
+}
+
+#footer {
+  margin-top: 50px;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+#footer p {
+  margin: 20px 0;
+}
