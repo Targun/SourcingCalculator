@@ -3,4 +3,4 @@ SourcingCalculator
 
 Strategic Sourcing Calculator
 
-Here is the <a href="http://SourcingCalculator.azurewebsites.net">Demo</a>
+Here is the <a href="http://industrycalc.azurewebsites.net">Demo</a>
