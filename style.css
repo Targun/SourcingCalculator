@@ -1,90 +1,82 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 body {
-  font: normal 100% "Open Sans", sans-serif;
-  color: #2E3640;
-  width:90%;
-  margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	color: #272727;
+	font-weight: 300;
 }
 
-p {
-  font-size:1.3em;
+.title {
+	margin: 50px 0 50px 250px;
 }
 
-h1 {
-  margin-bottom: 40px;
+.my-radio {
+	line-height: 14px;
+	margin-bottom: 25px;
 }
 
-.container {
-  margin-top: 20px;
+.my-radio:hover {
+	cursor: pointer;
+	color: #EF985F;
 }
 
-div.lead {
-  margin-bottom: 40px;
+.calc-part {
+	font-weight: 300;
+	text-align: left;
+}
+.calc-part-wrap{
+	height: 130px;
+	margin: 20px 0;
+}
+.sourcing-calc-icon {
+	width: 90px;
+	position: relative;
+	left: 24px;
+	top: -27px;
+}
+.calc-input {
+	border: none;
+	border-bottom: 1px solid #272727;
+	font-size: 2rem;
+	width: 165px;
+}
+.calc-input:focus {
+	outline: none;
+}
+.cash{
+	font-size: 2rem;
+}
+.savings-input {
+	width: 150px;
+}
+input::-webkit-inner-spin-button {
+	/*This removes up down arrows in input numbers*/
+    -webkit-appearance: none;
+    margin: 0;
+}
+.calc-line-even {
+	height: 39px;
 }
 
-.btn {
-  color: #2E3640;
-  border: 2px solid #2E3640;
+.you-save{
+	font-size: 2rem;
 }
 
-.btn:hover,
-.btn:focus {
-  color: #f2f2f2;
-  background-color: #2E3640;
-  text-decoration: none;
+.calc-btn {
+	background-color: #fff;
+	border: 1px solid #272727;
+	font-size: 20px;
+	margin: 20px 0 10px 0;
+	padding: 5px 10px;
+	outline: none;
+	border-radius: 3px;
 }
 
-.btn-primary {
-  color: #ffffff;
-  background-color: #376493;
-  border-color: #345679;
+.calc-btn:hover {
+	background-color: #272727;
+	color: #fff;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
-  color: #ffffff;
-  background-color: #345679;
-  border-color: #345679;
-}
 
-.dropdown-menu>li>a:hover {
-  background-color: #376493;
-}
 
-#results p.lead {
-  margin-bottom: 0;
-}
 
-#yper {
-  color: #C6655E;
-}
-
-#hper {
-  color: #95CD9C;
-}
-
-#mper {
-  color: #6DBCDB;
-}
-
-input {
-  width: 150px;
-}
-
-.btn-group {
-  margin: 0 0 4px 1px;
-}
-
-#footer {
-  margin-top: 50px;
-  height: 100%;
-  background-color: #f5f5f5;
-}
-
-#footer p {
-  margin: 20px 0;
-}

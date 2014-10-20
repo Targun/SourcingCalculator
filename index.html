@@ -1,47 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="sourceCalc">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Strategic Sourcing Calculator</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <h1>Strategic Sourcing Calculator</h1>
-      <p class="lead">Units Purchased</p>
-      <div class="lead">
-        <input id="lbs" type="text" placeholder="Units">
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary">per year</button>
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li id="yearSelect"><a href="#" >per year</a></li>
-            <li id="monthSelect"><a href="#" >per month</a></li>
-          </ul>
+
+    <div class="container" ng-controller="mainCtrl">
+      <h1 class="title">Strategic Sourcing Calculator</h1>
+
+      <div class="row">
+
+        <div class="col-md-4 calc-part">
+          <div class="calc-part-wrap">
+            <h3>Units Purchased <span>{{perTime}}</span></h3>
+            <p ng-click="changeTime()" class="my-radio"><i class="ion-loop"></i> {{notPerTime}}</p>
+            <input class="calc-input" type="number" placeholder="Units" ng-model="units">
+          <img class="sourcing-calc-icon" src="img/scale.png">
+          </div>
         </div>
+
+        <div class="col-md-4 calc-part">
+          <div class="calc-part-wrap">
+            <h3>Possible Savings Per Unit</h3>
+            <div class="calc-line-even"></div>
+            <span class="cash">$ </span><input class="calc-input savings-input" type="number" placeholder="0.00" ng-model="savings">
+          <img class="sourcing-calc-icon" src="img/pigbank.png">
+          </div>
+        </div>
+
+        <div class="col-md-4 you-save">
+          <button class="calc-btn" ng-click="calcSavings()">You would save...</button>
+          <div id="results">
+            <p>${{yearlySavings}}<span> per year</span></p>
+            <p>${{monthlySavings}}<span> per month</span></p>
+          </div>
+        </div>
+
       </div>
+    </div>
 
-      <p class="lead">Possible Savings Per Unit</p>
-      <div class="lead">
-        <input id="saved" type="text" placeholder="$">
-      </div>
-
-
-    <p class="lead">You would save...</p>
-    <div id="results">
-      <p id="y" class="lead"><span id="year">$____</span><span id="yper"> per year</span></p>
-      <p id="m" class="lead"><span id="month">$____</span><span id="mper"> per month</span></p>
-    </div><!-- end results-->
-
-  </div><!-- end container -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://api.ning.com:80/files/ZF50gJ1IzcVU3iFK06HMBZjy6i-IZpVeE56dHMlPpaRZ2FhSlQXzhdIgDxDoGePeqBPpoDFuVm3Ap0DJrrLpS*Kdjf5poGXo/main.js"></script>    
-    <script src="script.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/mainCtrl.js"></script>
+    <script src="/scripts/services/mainService.js"></script>
+    <script src="/scripts/directives/radio.js"></script>
   </body>
 </html>  
+
+
+
+
+
+
+
+<!-- 
+<p ng-click="topCheck()" class="my-radio"><i class="my-radio-icon" ng-class="{'ion-checkmark-circled':radioCheck, 'ion-ios7-circle-outline':radioUncheck}"></i> per year</p>
+            <p ng-click="lowCheck()" class="my-radio"><i class="my-radio-icon" ng-class="{'ion-checkmark-circled':radioUncheck, 'ion-ios7-arrow-right':radioCheck}"></i> per month</p> -->
